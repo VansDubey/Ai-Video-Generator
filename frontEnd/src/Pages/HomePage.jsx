@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { Moon, Sun, User } from "lucide-react";
 import { useAuth } from "./authContext"; // ✅ import context
 
+
 export default function Home() {
   const { user, logout } = useAuth(); // ✅ get user from context
   const navigate = useNavigate();
@@ -36,7 +37,7 @@ export default function Home() {
             </Link>
             <li className="hover:text-white cursor-pointer">Create</li>
             <li className="hover:text-white cursor-pointer">Templates</li>
-            <li className="hover:text-white cursor-pointer">Pricing</li>
+            <Link to ='/Pricing' className="hover:text-white cursor-pointer">Pricing</Link>
 
             {!user ? (
               <>
