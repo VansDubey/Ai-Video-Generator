@@ -10,6 +10,10 @@ router.get('/',async(req,res)=>{
   res.send("Api is running");
 })
 
+router.get('/register',async(req,res)=>{
+  res.send("On register get route");
+})
+
 router.post('/register', async (req,res) => {
   const { email, password, name } = req.body;
   
@@ -38,7 +42,7 @@ router.post('/register', async (req,res) => {
 
 router.post('/login', async (req,res) => {
   const { email, password } = req.body;
-  console.log(req.body)
+ 
   const user = await User.findOne({ email });
   if (!user || !user.passwordHash) return res.status(401).json({ error: 'Invalid credentials' });
 
