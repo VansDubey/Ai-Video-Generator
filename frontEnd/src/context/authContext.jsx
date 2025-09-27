@@ -6,7 +6,7 @@ export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
   const [accessToken, setAccessToken] = useState(null);
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(true);
 
   // axios interceptor
   axios.interceptors.request.use((config) => {

@@ -9,3 +9,5 @@ app.use(cors({
 }));
 
 Use this instead.
+
+// Pending => role based authentication and OAuth authentication.

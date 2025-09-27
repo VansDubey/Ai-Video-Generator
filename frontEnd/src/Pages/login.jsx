@@ -4,7 +4,7 @@ import { GoogleOAuthProvider, GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { AuthContext } from "./authContext"; // ✅ import context
+import { AuthContext } from "../context/authContext"; // ✅ import context
 
 export default function Login() {
   const [email, setEmail] = useState("");
